@@ -1,7 +1,7 @@
 # TahminEtmeOyunu
 C# Tahmin yapma oyunu
 
-    Bugün sizler ile C# ile yaptığımız oyundan söz söyleyecek:
+    Bugün sizler ile C# ile yaptığımız oyundan biraz bahsedelim:
 
 Kodları o kadar zorlayacak derece yazmadım hepinizin kısa bir C# bilgisi ile anlayacağınızı yollar.
 Sunucuda Visual Studio 2022 yüklü olmasıdır veya doğrudan olarak yükleyeceğim cmd ekranınız ile başlatabilirsiniz.
