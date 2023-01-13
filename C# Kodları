@@ -1,0 +1,33 @@
+using System;
+
+namespace RandomApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random(); // Random bir değer üretilmesini istediğim için random sınıfının tanımlamasını gerçekleştirdim.
+            int randomSayi, seninTahminin, tahminHakki = 0;
+            randomSayi = random.Next(0, 10); // 0 ile 10 Arasında Random Değer Üretildi.
+            Console.WriteLine(new string('-', 25) + "\n-> Random Değer Üretildi.\n-> Üretilen Random Değer 0 ile 10 Arasında Olabilir.\n" + new string('-', 25));
+            do
+            {
+                Console.Write("-> {0}. Tahminin: ", (tahminHakki + 1));
+                seninTahminin = Convert.ToInt32(Console.ReadLine());
+                if (randomSayi == seninTahminin)
+                {
+                    Console.WriteLine(new string('-', 25) + "\nTebrik Ederim! {0} Deneme Hakkında Doğru Bildin.", (tahminHakki + 1));
+                    Console.WriteLine("-> Bilgisayar Tarafından Üretilen Değer: " + randomSayi + "\n" + new string('-', 25));
+                    break; // Döngüyü Kırmak İçin
+                }
+                else if (tahminHakki >= 2)
+                {
+                    Console.WriteLine(new string('-', 25) + "\nÜzgünüm Deneme Hakkın Doldu.");
+                    Console.WriteLine("-> Bilgisayar Tarafından Üretilen Değer: " + randomSayi + "\n" + new string('-', 25));
+                }
+                tahminHakki++;
+            } while (tahminHakki <= 2);
+            Console.ReadKey();
+        }
+    }
+}
